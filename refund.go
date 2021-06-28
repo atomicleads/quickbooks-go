@@ -8,12 +8,16 @@ import (
 )
 
 type Refund struct {
+	ID        string   `json:"Id,omitempty"`
+
 	Line []RefundLine
 	DepositToAccountRef ReferenceType       `json:",omitempty"`
 	CustomerRef         ReferenceType       `json:",omitempty"`
 }
 
 type RefundLine struct {
+	ID        string   `json:"Id,omitempty"`
+
 	DetailType          string              `json:",omitempty"`
 	Amount              json.Number         `json:",omitempty"`
 	SalesItemLineDetail SalesItemLineDetail `json:",omitempty"`
