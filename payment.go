@@ -9,6 +9,7 @@ import (
 
 type Payment struct {
 	ID             string      `json:"Id,omitempty"`
+	TxnDate   Date   `json:",omitempty"`
 	TotalAmt       json.Number `json:",omitempty"`
 	ProcessPayment bool        `json:",omitempty"`
 	CustomerRef    ReferenceType

@@ -9,7 +9,7 @@ import (
 
 type Refund struct {
 	ID        string   `json:"Id,omitempty"`
-
+	TxnDate   Date   `json:",omitempty"`
 	Line []RefundLine
 	DepositToAccountRef ReferenceType       `json:",omitempty"`
 	CustomerRef         ReferenceType       `json:",omitempty"`
